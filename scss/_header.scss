@@ -1,0 +1,45 @@
+/* map - backg */
+
+$fondo:(header:#212529);
+
+@each $clave, $valor in $fondo {
+    .bgr_#{$clave} {
+        background-color:$valor;
+    }
+}
+
+/* map get - menu fuente */
+
+$menu: (
+    size: 14px,
+    font: "roboto",
+    text: uppercase,
+    weight: bold);
+
+
+.menu_fuente{   
+    font-size: map-get($menu, size);
+    font-family: map-get($menu, font);
+    text-transform: map-get($menu, text);
+    font-weight: map-get($menu, weight);       
+}
+
+.menu li a{   
+    margin-right: 20px;
+    padding:.5rem;
+    
+    color: white;
+    text-decoration: none;   
+}
+  
+.menu li a:hover{  
+    color: red;      
+}
+
+.barraNav {
+    position: fixed;
+    top: 0px;   
+    z-index: 2; 
+  }
+    
+  

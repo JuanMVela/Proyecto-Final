@@ -1,0 +1,74 @@
+/* map - backg */
+$fondo:(footer:#212529);
+
+
+@each $clave, $valor in $fondo {
+    .bgr_#{$clave} {
+        background-color:$valor;
+    }
+}
+
+/* mixin - logos */
+
+@mixin logo($ancho, $alto, $margen, $padding, $bordes, $color_fondo,$bordeColor) {
+    width: $ancho;
+    height: $alto;
+    margin: $margen;
+    padding: $padding;
+    border-radius: $bordes;
+    background-color: $color_fondo;
+    border: $bordeColor
+    
+}
+
+.logo_redes{
+    @include logo(30px, 30px, 0px, 2px, 15px, white, 2px solid red);
+}
+
+.logo_redes:hover{  
+    background-color: red;
+    border: 2px solid red; 
+  }
+
+.whatsapp {
+    position: fixed;
+    bottom: 84px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    z-index: 2; 
+  }
+
+  .text-small {
+    font-size: 0.9rem;
+  }
+  
+  .ft a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .ft a:hover, .ft a:focus {
+    text-decoration: none;
+    color: red;
+  }
+  
+  .form-control {
+    background: #212529;
+    border-color: #545454;
+  }
+  
+  .form-control:focus {
+    background: #212529;
+  }
+  
+  footer {
+    background: #212529;
+  }
+    
+
+
+
+
+ 
